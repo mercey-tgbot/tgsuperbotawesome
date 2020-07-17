@@ -6,9 +6,9 @@ from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
 
 cdata = {}
 
-TOKEN = '1073212465:AAEPgR1koz3100ls6rExEjO_NnfwWSBVoRI'
-testkey = str(open('token.txt').read()).replace('\n', '').replace(' ', '')
-stripe.api_key = testkey
+TOKEN = '1319668746:AAEKFjQsLhK9FtmzW1mQ3cjNHMhovu1aQvw'
+livekey = str(open('token.txt').read()).replace('\n', '').replace(' ', '')
+stripe.api_key = livekey
 
 
 def payment(amount, name, cardnum, cardmonth, cardyear, cardcvc, email, phone, description, country, city, address_line1, address_line2, zip):
