@@ -6,7 +6,7 @@ from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton
 
 cdata = {}
 
-TOKEN = '1319668746:AAEKFjQsLhK9FtmzW1mQ3cjNHMhovu1aQvw'
+TOKEN = '1346049058:AAFgGXk_s2pV7s4BNkI46sYaaxNsxhLOrSU'
 livekey = str(open('token.txt').read()).replace('\n', '').replace(' ', '')
 stripe.api_key = livekey
 
