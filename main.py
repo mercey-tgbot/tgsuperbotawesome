@@ -46,13 +46,13 @@ def payment(amount, name, cardnum, cardmonth, cardyear, cardcvc, email, phone, d
             customer_id = cdata[cardnum]
     except stripe.error.CardError as e:
         print(e)
-        return 'Card not live'
+        return 'Invalid card'
     except stripe.error.RateLimitError as e:
         print(e)
         return 'Too many requests made'
     except stripe.error.InvalidRequestError as e:
         print(e)
-        return 'Please see logs'
+        return 'Invalid card data'
     except stripe.error.AuthenticationError as e:
         print(e)
         return 'Connection failed. Try again'
@@ -121,7 +121,7 @@ def handler(data):
                                          ))
         except Exception as e:
             print(e)
-            bot.sendMessage(uid, 'Payment declined by bank')
+            bot.sendMessage(uid, 'Wrong data. Try again.')
 
 bot = telepot.Bot(TOKEN)
 # bot.deleteWebhook()
